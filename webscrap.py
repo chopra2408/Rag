@@ -41,7 +41,7 @@ if url:
         st.session_state.last_url = url
         
     # Initialize Groq model
-    llm = ChatGroq(groq_api_key="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", model_name="gemma2-9b-it")
+    llm = ChatGroq(groq_api_key=os.getenv("GROQ_API_KEY"), model_name="gemma2-9b-it")
 
     # Define prompt template
     prompt = ChatPromptTemplate.from_template('''
